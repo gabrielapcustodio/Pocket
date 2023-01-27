@@ -9,14 +9,14 @@ img {
   }
   
   picture img {
-    width: 100px;
+    width: 130px;
     position: absolute;
   }
   
   picture > span {
     position: fixed;
-    margin-top: 50px;
-    margin-left: 10px;
+    margin-top: 65px;
+    margin-left: 20px;
   }
   
   
@@ -29,6 +29,12 @@ img {
     border-radius: 100%;
   }
   
+  .informacoes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10 px;
+  }
   
   .flex {
     display: flex;

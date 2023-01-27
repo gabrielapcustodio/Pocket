@@ -1,14 +1,13 @@
 
 // import {} from './lib/code.org.js';
 
-let economia = prompt("Quanto você quer economizar?");
-let carteira = 200;
-const comida = 30;
-const brinquedo = 15;
-const circo = 20;
+// usuário preenche orçamento
 
+// usuário preenche economia
 
+// código pega o valor de orçamento e insere na carteira
 
-function fazCompra() {
+// ao clicar em cada botão de despesa, o valor é reduzido da carteira
 
-};
+// O valor de gasto máximo é utilizado para checar se o que ainda tem na carteira é maior ou igual ao que se quer economizar
+
