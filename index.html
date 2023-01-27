@@ -12,14 +12,17 @@
         <header>
           <h1>Gerenciador de Viagem</h1>
         </header>
-        <section class="informacoes">
-          <label for="orcamento">Quanto você tem atualmente?
-            <input type="number" id="orcamento" name="orcamento" placeholder="Orçamento">
-          </label>
-          <label for="economia">Quanto gostaria de economizar?
-            <input type="number" id="economia" name="economia" placeholder="Gasto máximo">
-          </label>
-        </section>
+        <form>
+          <section class="informacoes">
+            <label for="orcamento">Quanto você tem atualmente?
+              <input type="number" id="orcamento" name="orcamento" placeholder="Orçamento" step="1" min="0">
+            </label>
+            <label for="economia">Quanto gostaria de economizar?
+              <input type="number" id="economia" name="economia" placeholder="Valor para guardar">
+            </label>
+          </section>
+          <button id="infoButton" type="submit">Enviar</button>
+        </form>
         <picture>
           <img src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/wallet.png?t=1655228121000" alt="Carteira">
           

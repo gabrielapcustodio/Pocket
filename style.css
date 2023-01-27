@@ -1,47 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 img {
-    width: 50px;
-  }
-  
-  picture {
-    display: block;
-    height: 100px;
-    margin: 10px;
-  }
-  
-  picture img {
-    width: 130px;
-    position: absolute;
-  }
-  
-  picture > span {
-    position: fixed;
-    margin-top: 65px;
-    margin-left: 20px;
-  }
-  
-  
-  ul {
-    list-style:none;
-    padding: 0;
-  }
-  
-  section :is(button, img) {
-    border-radius: 100%;
-  }
-  
-  .informacoes {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 10 px;
-  }
-  
-  .flex {
-    display: flex;
-  }
-  
-  .flex li {
-    padding: 10px;
-    
-  }
-  
+  width: 50px;
+}
+
+picture {
+  display: block;
+  height: 100px;
+  margin: 10px;
+}
+
+picture img {
+  width: 130px;
+  position: absolute;
+}
+
+picture > span {
+  position: fixed;
+  margin-top: 65px;
+  margin-left: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section :is(button, img) {
+  border-radius: 100%;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 2em;
+}
+
+.informacoes > label {
+  padding: 1em;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex li {
+  padding: 10px;
+}
