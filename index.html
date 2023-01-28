@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,43 +20,45 @@
               <input type="number" id="orcamento" name="orcamento" placeholder="Orçamento" step="1" min="0">
             </label>
             <label id="labelEconomia" for="economia">Quanto gostaria de economizar?
-              <input type="number" id="economia" name="economia" placeholder="Valor para guardar">
+              <input type="number" id="economia" name="economia" placeholder="Valor para guardar"  step="1" min="0">
             </label>
           </section>
-          <button class="btn btn-secondary btn-sm" id="infoButton" type="submit">Cadastrar</button>
+          <button class="btn btn-secondary btn-sm" id="infoButton" type="submit">Cadastrar informações</button>
         </form>
         <picture id="picture">
           <img id="imgCarteira" src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/wallet.png?t=1655228121000" alt="Carteira">
-          <span class="rounded-pill">R$ <span id="valorCarteira"></span></span>
+          <span class="rounded-pill" id="spanValue">R$ <span id="valorCarteira"></span></span>
         </picture>
         <section class="botoes-para-compra">
           <ul class="list">
             <li>
-              <h3>Comida</h3>
+              <h3 id="titleComida">Comida</h3>
               <button id="comida">
                 <img id="imgComida" src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/pizza.png?t=1655228121000" alt="Comida">
               </button>
             </li>
             <li>
-              <h3>Brinquedo</h3>
+              <h3 id="titleBrinquedo">Brinquedo</h3>
               <button id="brinquedo">
                 <img id="imgBrinquedo" src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/ride.png?t=1655228121000" alt="Briquedo">
               </button>
             </li>
             <li>
-              <h3>Circo</h3>
+              <h3 id="titleCirco">Circo</h3>
               <button id="circo">
                 <img id="imgCirco" src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/character.png?t=1655228120000" alt="Circo">
               </button>
             </li>
           </ul>
-          <footer class="botoes-finais">
+          <section class="botoes-finais">
             <button class="btn btn-info btn-sm" id="go-extrato">Extrato</button>
             <button class="btn btn-danger btn-sm" id="refresh-page">Recomeçar</button>
-          </footer>
+          </section>
+        </section>
+        <section id="tabelaExtrato">
         </section>
       </main>
-
+      <footer></footer>
       <script src="app.js" type="module"></script>
 </body>
 </html>
