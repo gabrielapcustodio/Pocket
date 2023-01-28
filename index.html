@@ -6,54 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <main>
-        <header>
-          <h1>Gerenciador de Viagem</h1>
+<body class="bg-light position-relative">
+    <main class="container-md">
+        <header class="">
+          <h1>Gerenciador de Gastos</h1>
         </header>
-        <form>
+        <form class="formulario">
           <section class="informacoes">
-            <label for="orcamento">Quanto você tem atualmente?
+            <label id="labelOrcamento" for="orcamento">Quanto você tem atualmente?
               <input type="number" id="orcamento" name="orcamento" placeholder="Orçamento" step="1" min="0">
             </label>
-            <label for="economia">Quanto gostaria de economizar?
+            <label id="labelEconomia" for="economia">Quanto gostaria de economizar?
               <input type="number" id="economia" name="economia" placeholder="Valor para guardar">
             </label>
           </section>
-          <button id="infoButton" type="submit">Enviar</button>
+          <button class="btn btn-secondary btn-sm" id="infoButton" type="submit">Enviar</button>
         </form>
-        <picture>
-          <img src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/wallet.png?t=1655228121000" alt="Carteira">
-          
-          <span>R$ <span id="valorCarteira"></span></span>
+        <picture id="picture">
+          <img id="imgCarteira" src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/wallet.png?t=1655228121000" alt="Carteira">
+          <span class="rounded-pill">R$ <span id="valorCarteira"></span></span>
         </picture>
-        
-        <section>
-          <ul class="flex">
+        <section class="botoes-para-compra">
+          <ul class="list">
             <li>
               <h3>Comida</h3>
-              <button id="comida" onclick="fazCompra()">
-                <img src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/pizza.png?t=1655228121000" alt="Comida">
+              <button id="comida">
+                <img id="imgComida" src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/pizza.png?t=1655228121000" alt="Comida">
               </button>
             </li>
             <li>
               <h3>Brinquedo</h3>
-              <button id="brinquedo" onclick="fazCompra()">
-                <img src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/ride.png?t=1655228121000" alt="Briquedo">
+              <button id="brinquedo">
+                <img id="imgBrinquedo" src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/ride.png?t=1655228121000" alt="Briquedo">
               </button>
             </li>
             <li>
               <h3>Circo</h3>
-              <button id="circo" onclick="fazCompra()">
-                <img src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/character.png?t=1655228120000" alt="Circo">
+              <button id="circo">
+                <img id="imgCirco" src="https://studio.code.org/v3/assets/zgHYxcMPVlqog0epABtslttb63j0Ww9hKIzVDNgx_oE/character.png?t=1655228120000" alt="Circo">
               </button>
             </li>
           </ul>
+          <footer class="botoes-finais">
+            <button class="btn btn-info btn-sm" id="go-extrato">Extrato</button>
+            <button class="btn btn-danger btn-sm" id="refresh-page">Recomeçar</button>
+          </footer>
         </section>
-        <footer>
-          <button id="go-extrato">Extrato</button>
-        </footer>
       </main>
 
       <script src="app.js" type="module"></script>

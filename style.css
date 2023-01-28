@@ -1,53 +1,146 @@
 * {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+	grid-auto-columns: 200px;
+  grid-auto-flow: column;
+  align-content: center;
+  justify-items: center;
+}
+
+main {
+  margin: 2rem 0rem 0rem 2rem;
+  padding:0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 100px;
+  align-content: center;
+  justify-items: center;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+form {
   margin: 0;
-  padding: 0;
-}
-
-img {
-  width: 50px;
-}
-
-picture {
-  display: block;
-  height: 100px;
-  margin: 10px;
-}
-
-picture img {
-  width: 130px;
-  position: absolute;
-}
-
-picture > span {
-  position: fixed;
-  margin-top: 65px;
-  margin-left: 20px;
+  display: grid;
+  justify-content: center;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
 }
 
-section :is(button, img) {
-  border-radius: 100%;
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li > h3 {
+  margin-bottom: 0.5rem;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+li > button {
+  margin: 0rem 3rem 0rem 3rem ;
+}
+
+span {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 500;
 }
 
 .informacoes {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  width: 2em;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .informacoes > label {
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
-.flex {
+.botoes-para-compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
   display: flex;
 }
 
-.flex li {
-  padding: 10px;
+.botoes-finais > button {
+  width: 15rem;
+}
+
+#labelOrcamento {
+  padding: 0rem 1rem 1rem 0rem;
+}
+
+#labelEconomia {
+  padding: 0rem 0rem 0rem 1rem;
+}
+
+#orcamento, #economia {
+  margin-top: 0.3rem;
+}
+
+#picture {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+#imgCarteira {
+  display: block;
+  width: 7rem;
+  margin-top: 0.5rem;
+}
+
+#picture > span {
+  margin-bottom: 1rem;
+}
+
+#imgComida, #imgBrinquedo, #imgCirco {
+  width: 3rem;
+}
+
+#comida, #comida > img,
+#brinquedo, #brinquedo > img,
+#circo, #circo > img {
+  border-radius: 50%;
+  border: none;
+}
+
+::placeholder {
+  padding-left: 0.3rem;
 }
