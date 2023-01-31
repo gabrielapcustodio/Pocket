@@ -100,6 +100,24 @@ span {
   width: 15rem;
 }
 
+.containerGastos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.labelGastos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+#titleComida, #titleBrinquedo, #titleCirco {
+  font-weight: 500;
+  text-align: center;
+}
+
 #labelOrcamento {
   padding: 0rem 1rem 1rem 0rem;
 }

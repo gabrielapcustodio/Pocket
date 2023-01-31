@@ -1,10 +1,12 @@
 import { cadastraInformacoes, realizaCompra, alertaPoupanca, criaExtrato, atualizaPagina } from './lib/newFunctions.js';
 
-// definir variáveis
+// import { infoBotao, refreshBotao, botaoExtrato, tituloComida, tituloBrinquedo, tituloCirco, valorCarteira, orcamento, ECONOMIA, COMIDA, BRINQUEDO, CIRCO } from './variables.js';
+
+
+// definir variáveis 
 
 const infoBotao = document.getElementById("infoButton");
-const refreshBotao = document.getElementById("refresh-page");
-const botaoExtrato = document.getElementById("go-extrato");
+const refreshBotao = document.getElementById("refresh-page"); const botaoExtrato = document.getElementById("go-extrato");
 
 const tituloComida = document.getElementById("titleComida").innerHTML;
 const tituloBrinquedo = document.getElementById("titleBrinquedo").innerHTML;
@@ -12,24 +14,23 @@ const tituloCirco = document.getElementById("titleCirco").innerHTML;
 
 let valorCarteira = document.getElementById("valorCarteira");
 let orcamento = document.getElementById("orcamento");
-let economia = document.getElementById("economia");
+const ECONOMIA = document.getElementById("economia");
 
-const valorComida = 50;
-const valorBrinquedo = 35;
-const valorCirco = 40;
-
+let comida = document.getElementById("valorComida").innerHTML;
+let brinquedo = document.getElementById("valorBrinquedo").innerHTML;
+let circo = document.getElementById("valorCirco").innerHTML;
 
 // Início da operação
-cadastraInformacoes(infoBotao, orcamento, economia, valorCarteira);
+cadastraInformacoes(infoBotao, orcamento, ECONOMIA, valorCarteira);
 
 let extratoDosGastos = [];
 
 // Compras
-realizaCompra("comida", valorCarteira, economia, valorComida, tituloComida, "spanValue");
+realizaCompra("comida", valorCarteira, ECONOMIA, comida, tituloComida, "spanValue");
 
-realizaCompra("brinquedo", valorCarteira, economia, valorBrinquedo, tituloBrinquedo, "spanValue");
+realizaCompra("brinquedo", valorCarteira, ECONOMIA, brinquedo, tituloBrinquedo, "spanValue");
 
-realizaCompra("circo", valorCarteira, economia, valorCirco, tituloCirco, "spanValue");
+realizaCompra("circo", valorCarteira, ECONOMIA, circo, tituloCirco, "spanValue");
 
 // Extrato
 
