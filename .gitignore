@@ -1,1 +1,49 @@
 variables.js
+
+
+
+
+// Atualiza o valor exibido na tela
+
+const atualizaValor = (valorTela, novoValor, tipoTitulo) => {
+    if (checaVazio("valorCarteira") === true) {
+        valorTela.innerHTML -= novoValor;
+        criaObjetoDosGastos(tipoGasto, tipoTitulo, valorTela.innerHTML);
+    }
+}
+
+// cria objetos com os gastos por tipo, valor e novo orçamento
+
+const criaObjetoDosGastos = (tipoGasto, tipoTitulo, variavel) => {
+    return new Gasto(tipoGasto, tipoTitulo, variavel);
+  };
+
+
+// O valor que deve ser guardado é utilizado para checar se o que ainda tem na carteira é maior ou igual ao que se quer economizar
+export const alertaPoupanca = (valorTela, economDigitada, id) => {
+  if (valorTela.innerHTML <= economDigitada.innerHTML) {
+    const el = document.getElementById(id).innerHTML;
+    if (el) {
+        el.style.color = "red";
+    }
+  }
+};
+
+// Botão para atualizar a página
+
+export const atualizaPagina = (element) => {
+  element.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.reload();
+  });
+};
+
+// Botão para aparecer o extrato
+
+export const criaExtrato = (element, listElements) => {
+  element.addEventListener("click", function (event) {
+    event.preventDefault();
+    alert(listElements);
+    element.disabled = true;
+  });
+};

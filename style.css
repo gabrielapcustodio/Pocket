@@ -1,6 +1,7 @@
 * {
   margin: 0rem;
   padding: 0rem;
+  font-family: 'Yantramanav', sans-serif;
 }
 
 body {
@@ -13,8 +14,7 @@ body {
 }
 
 main {
-  margin: 2rem 0rem 0rem 2rem;
-  padding:0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-columns: 100px;
@@ -27,7 +27,6 @@ header {
 }
 
 h1 {
-  font-family: 'Yantramanav', sans-serif;
   font-weight: 700;
   font-size: 2em;
   margin-bottom: 0;
@@ -55,7 +54,6 @@ li {
 
 li > h3 {
   margin-bottom: 0.5rem;
-  font-family: 'Yantramanav', sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
 }
@@ -65,8 +63,14 @@ li > button {
 }
 
 span {
-  font-family: 'Yantramanav', sans-serif;
+  
   font-weight: 500;
+}
+
+.container-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .informacoes {
@@ -80,29 +84,19 @@ span {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
-  font-family: 'Yantramanav', sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
 }
 
-.botoes-para-compra {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .list {
   display: flex;
-}
-
-.botoes-finais > button {
-  width: 15rem;
+  justify-content:center;
 }
 
 .containerGastos {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -110,8 +104,34 @@ span {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 1rem;
+  justify-content: space-around;
+  padding: 0.4rem;
 }
+
+.containerGastos > .labelGastos > input {
+  width: 8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.botoes-finais {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.botoes-finais > button {
+  width: 100%;
+}
+
+.botoes-finais > #go-extrato {
+ margin-right: 0.25rem;
+}
+
+.botoes-finais > #refresh-page {
+  margin-left: 0.25rem;
+}
+
 
 #titleComida, #titleBrinquedo, #titleCirco {
   font-weight: 500;
