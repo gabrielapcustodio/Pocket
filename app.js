@@ -1,12 +1,9 @@
-import { cadastraInformacoes, realizaCompraEAtualizaValor, alertaPoupanca, criaExtrato, atualizaPagina } from './lib/newFunctions.js';
+import { cadastraInformacoes, realizaCompra, alertaPoupanca, criaExtrato, atualizaPagina } from './lib/newFunctions.js';
 
 // import { infoBotao, refreshBotao, botaoExtrato, tituloAlimentacao, tituloLazer, tituloExposicoes, valorCarteira, orcamento, ECONOMIA, ALIMENTACAO, LAZER, EXPOSICOES } from './variables.js';
 
 
 // definir variáveis 
-
-
-
 
 const infoBotao = document.getElementById("infoButton");
 const refreshBotao = document.getElementById("refresh-page");
@@ -21,7 +18,7 @@ let orcamento = document.getElementById("orcamento");
 const ECONOMIA = document.getElementById("economia").innerHTML;
 
 let alimentacao = document.getElementById("valorAlimentacao").innerHTML;
-let Lazer = document.getElementById("valorLazer").innerHTML;
+let lazer = document.getElementById("valorLazer").innerHTML;
 let exposicoes = document.getElementById("valorExposicoes").innerHTML;
 
 // Início da operação
@@ -30,11 +27,11 @@ cadastraInformacoes(infoBotao, orcamento, ECONOMIA, valorCarteira);
 let extratoDosGastos = [];
 
 // Compras
-realizaCompraEAtualizaValor("alimentacao", valorCarteira, ECONOMIA, alimentacao, tituloAlimentacao, "spanValue");
+realizaCompra("alimentacao", valorCarteira, ECONOMIA, alimentacao, tituloAlimentacao, "spanValue");
 
-realizaCompraEAtualizaValor("lazer", valorCarteira, ECONOMIA, lazer, tituloLazer, "spanValue");
+realizaCompra("lazer", valorCarteira, ECONOMIA, lazer, tituloLazer, "spanValue");
 
-realizaCompraEAtualizaValor("exposicoes", valorCarteira, ECONOMIA, exposicoes, tituloExposicoes, "spanValue");
+realizaCompra("exposicoes", valorCarteira, ECONOMIA, exposicoes, tituloExposicoes, "spanValue");
 
 // Extrato
 
